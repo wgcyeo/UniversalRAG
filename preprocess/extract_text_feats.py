@@ -1,11 +1,12 @@
 import os
 import pickle
-import torch
-from sentence_transformers import SentenceTransformer
+import pandas as pd
 from tqdm import tqdm
 
-model = SentenceTransformer('BAAI/bge-large-en-v1.5')
-tokenizer = model.tokenizer
+from universalrag.embedding import EmbeddingModel
+
+model = EmbeddingModel()
+tokenizer = model.text_model.model.tokenizer
 
 def split_text_into_chunks(text, max_tokens):
     """
@@ -23,60 +24,57 @@ def split_text_into_chunks(text, max_tokens):
     chunks = [tokenizer.decode(chunk, skip_special_tokens=True) for chunk in tokenized_chunks]
     return chunks
 
-def extract_text_feats(input_path, output_path, num_splits=1, split_index=None, disable_prog=False, long_text=False, max_tokens=512, batch_size=256):
+def extract_text_feats(input_path, output_path, num_splits=1, split_index=None, long_text=False, max_tokens=512, batch_size=32):
     """
-    Extract features for all .txt files in a directory and save them as a pickle file.
+    Extract features from a parquet file and save them as a pickle file.
 
     Args:
-        input_path (str): Path to the directory containing .txt files.
+        input_path (str): Path to the parquet file with 'psg_id' and 'text' columns.
         output_path (str): Path to save the pickle file.
-        num_splits (int): Number of splits to divide the total files into.
+        num_splits (int): Number of splits to divide the total rows into.
         split_index (int, optional): Index of the split to process (0-based).
-        disable_prog (bool): Whether to disable tqdm progress bars.
         long_text (bool): Whether to split text into chunks.
         max_tokens (int): Maximum number of tokens per text chunk if long_text is `True`.
         batch_size (int): Batch size for encoding.
     """
-    all_texts = sorted([f for f in os.listdir(input_path) if f.endswith('.txt')])
-    total_texts = len(all_texts)
+    df = pd.read_parquet(input_path, engine='fastparquet')
+    df = df.sort_index()
+    total_rows = len(df)
 
     if num_splits <= 0:
         raise ValueError("num_splits must be a positive integer.")
     if split_index is not None and (split_index < 0 or split_index >= num_splits):
         raise ValueError("split_index must be between 0 and num_splits - 1.")
 
-    split_size = (total_texts + num_splits - 1) // num_splits
+    split_size = (total_rows + num_splits - 1) // num_splits
 
     if split_index is None:
-        split_texts = all_texts
+        split_df = df
     else:
         split_start = split_index * split_size
-        split_end = min(split_start + split_size, total_texts)
-        split_texts = all_texts[split_start:split_end]
+        split_end = min(split_start + split_size, total_rows)
+        split_df = df.iloc[split_start:split_end]
 
     features = {}
     texts = []
-    filepaths = []
-    for filename in tqdm(split_texts, desc=f'Processing {"all text" if split_index is None else f"split {split_index + 1}/{num_splits}"}', disable=disable_prog):
-        filepath = os.path.join(input_path, filename)
-        with open(filepath, 'r', encoding='utf-8') as f:
-            text = f.read()
-
+    psg_ids = []
+    for psg_id, row in tqdm(split_df.iterrows(), total=len(split_df), desc=f'Processing {"all text" if split_index is None else f"split {split_index + 1}/{num_splits}"}'):
+        text = row['text']
         if long_text:
             chunks = split_text_into_chunks(text, max_tokens)
             for i, chunk in enumerate(chunks):
-                chunk_filepath = f"{filepath}_part{i + 1}"
+                chunk_psg_id = f"{psg_id}_part{i + 1}"
+                if chunk.strip() == "":
+                    continue
                 texts.append(chunk)
-                filepaths.append(chunk_filepath)
+                psg_ids.append(chunk_psg_id)
         else:
             texts.append(text)
-            filepaths.append(filepath)
+            psg_ids.append(psg_id)
 
-    with torch.no_grad():
-        encoded_features = model.encode(texts, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=not disable_prog)
-
-    for filepath, feature in zip(filepaths, encoded_features):
-        features[filepath] = feature
+    encoded_features = model.encode(texts, batch_size=batch_size)
+    for psg_id, feature in zip(psg_ids, encoded_features):
+        features[psg_id] = feature
 
     if split_index is not None:
         base, ext = os.path.splitext(output_path)
@@ -92,13 +90,12 @@ if __name__ == "__main__":
 
     import argparse
 
-    parser = argparse.ArgumentParser(description="Extract text features and save them as a pickle file.")
-    parser.add_argument("--input_path", type=str, required=True, help="Path to the directory containing .txt files.")
-    parser.add_argument("--output_path", type=str, required=True, help="Path to save the pickle file.")
-    parser.add_argument("--num_splits", type=int, default=1, help="Number of splits to divide the total files into.")
-    parser.add_argument("--split_index", type=int, default=None, help="Index of the split to process (0-based).")
-    parser.add_argument("--disable_prog", action="store_true", help="Disable progress bars.")
-    parser.add_argument("--long_text", action="store_true", help="Split text into chunks.")
+    parser = argparse.ArgumentParser(description="Extract text features from a parquet file and save them as a pickle file.")
+    parser.add_argument("--input-path", type=str, required=True, help="Path to the parquet file with 'psg_id' and 'text' columns.")
+    parser.add_argument("--output-path", type=str, required=True, help="Path to save the pickle file.")
+    parser.add_argument("--num-splits", type=int, default=1, help="Number of splits to divide the total rows into.")
+    parser.add_argument("--split-index", type=int, default=None, help="Index of the split to process (0-based).")
+    parser.add_argument("--long-text", action="store_true", help="Split text into chunks.")
     args = parser.parse_args()
 
     extract_text_feats(
@@ -106,6 +103,5 @@ if __name__ == "__main__":
         output_path=args.output_path,
         num_splits=args.num_splits,
         split_index=args.split_index,
-        disable_prog=args.disable_prog,
         long_text=args.long_text
     )

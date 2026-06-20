@@ -2,24 +2,81 @@
 
 trap "echo 'Interrupt received, stopping all processes...'; kill 0" SIGINT
 
-if [ "$#" -lt 4 ]; then
-    echo "Usage: $0 <INPUT_PATH> <OUTPUT_PATH> <LONG_TEXT> <CUDA_DEVICES (space-separated string)>"
+# Default values
+INPUT_PATH=""
+OUTPUT_PATH=""
+LONG_TEXT=""
+CUDA_DEVICES=()
+
+# Parse command line options
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --input-path)
+            INPUT_PATH="$2"
+            shift 2
+            ;;
+        --output-path)
+            OUTPUT_PATH="$2"
+            shift 2
+            ;;
+        --long-text)
+            LONG_TEXT="true"
+            shift
+            ;;
+        --cuda-devices)
+            shift
+            while [[ $# -gt 0 && ! "$1" =~ ^-- ]]; do
+                CUDA_DEVICES+=("$1")
+                shift
+            done
+            ;;
+        -h|--help)
+            echo "Usage: $0 --input-path <path> --output-path <path> [--long-text] --cuda-devices <device1> [device2] ..."
+            echo ""
+            echo "Options:"
+            echo "  --input-path    Path to input parquet file"
+            echo "  --output-path   Path to output pickle file"
+            echo "  --long-text     Enable long text processing (optional flag)"
+            echo "  --cuda-devices  Space-separated list of CUDA device IDs"
+            echo "  -h, --help      Show this help message"
+            exit 0
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Use --help for usage information"
+            exit 1
+            ;;
+    esac
+done
+
+# Validate required arguments
+if [ -z "$INPUT_PATH" ]; then
+    echo "Error: --input-path is required"
     exit 1
 fi
 
-INPUT_PATH="$1"
-OUTPUT_PATH="$2"
-LONG_TEXT="$3"
-CUDA_DEVICES_STR="$4"
-read -a CUDA_DEVICES <<< "$CUDA_DEVICES_STR"
+if [ -z "$OUTPUT_PATH" ]; then
+    echo "Error: --output-path is required"
+    exit 1
+fi
+
+if [ ${#CUDA_DEVICES[@]} -eq 0 ]; then
+    echo "Error: --cuda-devices requires at least one device"
+    exit 1
+fi
 
 NUM_SPLITS=${#CUDA_DEVICES[@]}
 
 echo -e "\033[34mInput path: $INPUT_PATH | Output path: $OUTPUT_PATH | Long text processing: $LONG_TEXT\033[0m"
 
+LOG_DIR=".log"
+mkdir -p "$LOG_DIR"
+TIME_INDEX=$(date +%Y%m%d_%H%M%S)
+
 for ((i = 0; i < NUM_SPLITS; i++)); do
-    echo "Processing split $((i + 1))/$NUM_SPLITS on GPU ${CUDA_DEVICES[i]}..."
-    CUDA_VISIBLE_DEVICES=${CUDA_DEVICES[i]} python preprocess/extract_text_feats.py --input_path $INPUT_PATH --output_path $OUTPUT_PATH --num_splits $NUM_SPLITS --split_index $i --disable_prog ${LONG_TEXT:+--long_text} &
+    LOG_FILE="$LOG_DIR/extract_text_feats_split_${i}_${TIME_INDEX}.log"
+    echo "Processing split $((i + 1))/$NUM_SPLITS on GPU ${CUDA_DEVICES[i]}... (logging to $LOG_FILE)"
+    CUDA_VISIBLE_DEVICES=${CUDA_DEVICES[i]} python preprocess/extract_text_feats.py --input-path $INPUT_PATH --output-path $OUTPUT_PATH --num-splits $NUM_SPLITS --split-index $i ${LONG_TEXT:+--long-text} > "$LOG_FILE" 2>&1 &
 done
 
 wait

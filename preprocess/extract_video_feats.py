@@ -1,49 +1,51 @@
 import os
-import sys
-import cv2
+import re
 import pickle
-import warnings
+import pandas as pd
 from tqdm import tqdm
 
-warnings.filterwarnings("ignore")
+from universalrag.embedding import EmbeddingModel
 
-if not os.getenv('INTERNVIDEO_PATH'):
-    raise EnvironmentError("Environment variable `INTERNVIDEO_PATH` is not set.")
-internvideo2_path = os.path.join(os.getenv('INTERNVIDEO_PATH'), 'InternVideo2/multi_modality')
-sys.path.append(internvideo2_path)
+embedding_model = EmbeddingModel()
 
-from utils.config import Config, eval_dict_leaf
-from demo.utils import _frame_from_video, setup_internvideo2, frames2tensor
+def extract_text_from_file(filepath):
+    """Extract text from VTT or TXT file."""
+    if filepath.endswith('.en.vtt'):
+        with open(filepath, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
 
-device = 'cuda'
+        text_lines = []
+        for line in lines:
+            if re.match(r'\d{2}:\d{2}:\d{2}\.\d{3} --> \d{2}:\d{2}:\d{2}\.\d{3}', line):
+                continue
+            if line.startswith('WEBVTT') or line.startswith('Kind:') or line.startswith('Language:'):
+                continue
+            if line.strip() == '':
+                continue
+            clean_line = re.sub(r'<[^>]+>', '', line).strip()
+            if clean_line:
+                text_lines.append(clean_line)
 
-config = Config.from_file(os.path.join(internvideo2_path, 'demo/internvideo2_stage2_config.py'))
-config = eval_dict_leaf(config)
-config.model.vision_encoder.pretrained = os.path.join(internvideo2_path, config.model.vision_encoder.pretrained)
-config.model.text_encoder.config = os.path.join(internvideo2_path, config.model.text_encoder.config)
-config.pretrained_path = os.path.join(internvideo2_path, config.pretrained_path)
-intern_model, _ = setup_internvideo2(config)
-intern_model.to(device)
+        return ' '.join(text_lines)
+    elif filepath.endswith('.txt'):
+        with open(filepath, 'r', encoding='utf-8') as file:
+            return file.read().strip()
+    else:
+        raise ValueError(f"Unsupported file format: {filepath}")
 
-def ensure_length_16(frames):
-    multiplier = 16 // len(frames)
-    remainder = 16 % len(frames)
-    extended_frames = [frame for frame in frames for _ in range(multiplier)]
-    extended_frames.extend(frames[:remainder])
-    return extended_frames
-
-def extract_video_feats(input_path, output_path, num_splits=1, split_index=None, disable_prog=False):
+def extract_video_feats(input_path, output_path, num_splits=1, split_index=None):
     """
-    Extract video features for all .mp4 files in a directory and save them as a pickle file.
+    Extract video features from a parquet file containing video paths and save them as a pickle file.
+    Script features are extracted only on the first split (split_index == 0 or None).
 
     Args:
-        input_path (str): Path to the directory containing video files.
+        input_path (str): Path to the parquet file containing video paths in index.
         output_path (str): Path to save the pickle file.
         num_splits (int): Number of splits to divide the total files into.
         split_index (int, optional): Index of the split to process (0-based).
-        disable_prog (bool): Whether to disable tqdm progress bars.
     """
-    all_videos = sorted([f for f in os.listdir(input_path) if f.endswith('.mp4')])
+    df = pd.read_parquet(input_path)
+    all_videos = df.index.tolist()
     total_videos = len(all_videos)
 
     if num_splits <= 0:
@@ -60,28 +62,42 @@ def extract_video_feats(input_path, output_path, num_splits=1, split_index=None,
         split_end = min(split_start + split_size, total_videos)
         split_videos = all_videos[split_start:split_end]
 
+    # Only encode scripts on first iteration (split_index == 0 or None)
+    if split_index == 0 or split_index is None:
+        script_features = {}
+        for video_path in tqdm(all_videos, desc="Processing video scripts"):
+            script_path = os.path.dirname(os.path.dirname(video_path))
+            scripts_dir = os.path.join(script_path, 'scripts')
+            video_id = os.path.splitext(os.path.basename(video_path))[0]
+            text_file_vtt = os.path.join(scripts_dir, video_id + '.en.vtt')
+            text_file_txt = os.path.join(scripts_dir, video_id + '.txt')
+
+            if not os.path.exists(video_path):
+                print(f"Video not found: {video_path}")
+                continue
+            if not os.path.exists(text_file_vtt) and not os.path.exists(text_file_txt):
+                print(f"Text not found: {text_file_vtt} or {text_file_txt}")
+                continue
+
+            text_file = text_file_vtt if os.path.exists(text_file_vtt) else text_file_txt
+            text_data = extract_text_from_file(text_file)
+            script_features[video_path] = embedding_model.encode_vis_query(text_data).squeeze(0)
+        
+        # Save script features with suffix
+        base, ext = os.path.splitext(output_path)
+        script_output_path = f"{base}_vidscript{ext}"
+        os.makedirs(os.path.dirname(script_output_path), exist_ok=True)
+        with open(script_output_path, 'wb') as f:
+            pickle.dump(script_features, f)
+    
+    # Process video features
     features = {}
-    for filename in tqdm(split_videos, desc=f"Processing {'all videos' if split_index is None else f'split {split_index + 1}/{num_splits}'}", disable=disable_prog):
-        filepath = os.path.join(input_path, filename)
-        video = cv2.VideoCapture(filepath)
-        frames = [x for x in _frame_from_video(video)]
-        video.release()
-
-        if not frames:
-            print(f'[ERROR] Video length is zero: {filepath}')
-            continue
-
-        if len(frames) < 16:
-            frames = ensure_length_16(frames)
-
-        fn = config.get('num_frames', 16)
-        size_t = config.get('size_t', 224)
-        frames_tensor = frames2tensor(frames, fnum=fn, target_size=(size_t, size_t), device=device)
-        del frames
-
-        feature = intern_model.get_vid_feat(frames_tensor).cpu().numpy().squeeze(0)
-        del frames_tensor
-        features[filepath] = feature
+    for filename in tqdm(split_videos, desc=f"Processing {'all videos' if split_index is None else f'split {split_index + 1}/{num_splits}'}"):
+        try:
+            feature = embedding_model.encode_video(os.path.abspath(filename)).squeeze(0)
+            features[filename] = feature
+        except Exception as e:
+            print(f"\033[91mError processing {filename}: {e}\033[0m")
 
     if split_index is not None:
         base, ext = os.path.splitext(output_path)
@@ -98,17 +114,15 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description="Extract video features and save them as a pickle file.")
-    parser.add_argument("--input_path", type=str, required=True, help="Path to the directory containing .mp4 files.")
-    parser.add_argument("--output_path", type=str, required=True, help="Path to save the pickle file.")
-    parser.add_argument("--num_splits", type=int, default=1, help="Number of splits to divide the total files into.")
-    parser.add_argument("--split_index", type=int, default=None, help="Index of the split to process (0-based).")
-    parser.add_argument("--disable_prog", action="store_true", help="Disable progress bars.")
+    parser.add_argument("--input-path", type=str, required=True, help="Path to the directory containing 'videos' and optionally 'scripts' subfolders.")
+    parser.add_argument("--output-path", type=str, required=True, help="Path to save the pickle file.")
+    parser.add_argument("--num-splits", type=int, default=1, help="Number of splits to divide the total files into.")
+    parser.add_argument("--split-index", type=int, default=None, help="Index of the split to process (0-based).")
     args = parser.parse_args()
 
     extract_video_feats(
         input_path=args.input_path,
         output_path=args.output_path,
         num_splits=args.num_splits,
-        split_index=args.split_index,
-        disable_prog=args.disable_prog
+        split_index=args.split_index
     )

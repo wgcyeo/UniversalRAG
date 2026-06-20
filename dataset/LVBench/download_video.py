@@ -25,13 +25,15 @@ def extract_video_id(url):
     else:
         raise ValueError(f"Invalid YouTube URL: {url}")
 
-def download_video(url, output_path):
+def download_video(url, output_path, cookies_file=None):
     video_id = extract_video_id(url)
     options = {
         'outtmpl': f'{output_path}/{video_id}.%(ext)s',
-        'format': 'best',
+        'format': 'best[vcodec!=av01][height<=480]',
         'quiet': True,
     }
+    if cookies_file:
+        options['cookiefile'] = cookies_file
     with YoutubeDL(options) as ydl:
         info = ydl.extract_info(url, download=True)
         metadata = {
@@ -42,7 +44,7 @@ def download_video(url, output_path):
         }
     return metadata
 
-def download_videos_from_file(file_path, output_path):
+def download_videos_from_file(file_path, output_path, cookies_file=None):
     with open(file_path, 'r') as file:
         urls = file.readlines()
 
@@ -51,7 +53,7 @@ def download_videos_from_file(file_path, output_path):
         url = url.strip()
         if url:
             try:
-                metadata = download_video(url, output_path)
+                metadata = download_video(url, output_path, cookies_file)
                 all_metadata.append(metadata)
                 logger.info(f"Downloaded: {metadata['Title']} (ID: {metadata['VideoID']})")
             except Exception as e:
@@ -67,10 +69,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download YouTube videos from a list of URLs.")
     parser.add_argument('--input', type=str, default='videos.txt', help='Input file with YouTube URLs')
     parser.add_argument('--output', type=str, default='videos', help='Output directory for downloaded videos')
+    parser.add_argument('--cookies', type=str, default=None, help='Path to cookies file for authentication')
     args = parser.parse_args()
 
     input_file = args.input
     output_dir = args.output
     os.makedirs(output_dir, exist_ok=True)
 
-    download_videos_from_file(input_file, output_dir)
+    download_videos_from_file(input_file, output_dir, args.cookies)

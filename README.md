@@ -1,10 +1,10 @@
 # UniversalRAG: Retrieval-Augmented Generation over Corpora of Diverse Modalities and Granularities
   
-[![Paper](https://img.shields.io/badge/arXiv-2504.20734-b31b1b)](https://arxiv.org/abs/2504.20734)
+[![Paper](https://img.shields.io/badge/arXiv-2504.20734-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.20734)
 [![Project-Page](https://img.shields.io/badge/Project-Page-green)](https://universalrag.github.io)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
-**UniversalRAG** is a novel RAG framework that retrieves across multiple modalities and granularities by introducing a *modality-aware routing mechanism* that dynamically identifies the most appropriate modality-specific corpus for each query, effectively addressing the limitations posed by modality gaps and fixed-granularity retrieval.
+**UniversalRAG** is a novel any-to-any RAG framework that retrieves across multiple modalities and granularities by introducing a *modality-aware routing mechanism* that dynamically identifies the most appropriate modality-specific corpus for each query, effectively addressing the limitations posed by modality gaps and fixed-granularity retrieval.
 
 <img src="assets/concept.png" alt="Concept Figure">
 
@@ -12,66 +12,66 @@
 
 ## Get Started
 
+To set up the environment, we recommend using [uv](https://docs.astral.sh/uv/) for a fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`.
+
 1. Clone this repository.
 ```bash
 git clone https://github.com/wgcyeo/UniversalRAG.git
 cd UniversalRAG
 ```
-2. Install dependencies in a new conda environment.
+2. Install dependencies with uv and activate the virtual environment.
 ```bash
-conda create -n universalrag python=3.12 -y
-conda activate universalrag
-pip install torch torchvision
-pip install -r requirements.txt
+uv sync
+source .venv/bin/activate
 ```
-3. Download and preprocess the datasets.
+3. Download and preprocess the datasets. This step may take a while because it downloads and preprocesses large datasets.
 ```bash
 bash script/0_dataset.sh
 ```
 
 ## Preprocessing
 
-To preprocess data corpora, we use [InternVideo](https://github.com/OpenGVLab/InternVideo) as a multimodal encoder. Begin by cloning the repository and following the [setup instructions](https://github.com/OpenGVLab/InternVideo/tree/main/InternVideo2/multi_modality) to install the required dependencies. Once set up, define the `INTERNVIDEO_PATH` environment variable to point to the root directory of the cloned repository:
-```bash
-export INTERNVIDEO_PATH="path/to/internvideo"
-```
-We additionally utilize the [bge-large-en-v1.5](https://huggingface.co/BAAI/bge-large-en-v1.5) model as a text-specific encoder to extract text embeddings, leveraging our modality-aware routing mechanism.
-
-Then, run the following command to extract embeddings for all queries and corpora across diverse modalities:
+Run the following command to extract embeddings for all queries and corpora across diverse modalities:
 ```bash
 bash script/1_preprocess.sh
 ```
-Change `CUDA_DEVICES` variable in the script to match the available GPUs on your system.
+Set the `CUDA_DEVICES` variable (e.g., `CUDA_DEVICES="0 1 2 3"`) to match the GPUs available on your system.
 
 ## Routing
 
 ### Training
 
-To train the training-based routers (e.g., DistilBERT or T5-Large), run the following script:
+To train a training-based router (e.g., Qwen3-VL-2B-Instruct or T5Gemma 2 270M), run:
 ```bash
 bash script/2_train.sh {model-name}
 ```
-Replace `{model-name}` with the desired router model. Supported options are `distilbert` and `t5-large`.
+Replace `{model-name}` with the desired router model. Supported options are `qwen3-vl-2b`, `internvl3_5-1b`, and `t5gemma-270m`.
+
+> [!WARNING]
+> To use T5Gemma 2, install Transformers v5 or later:
+> ```bash
+> uv pip install "transformers>=5"
+> ```
 
 ### Inference
 
-To perform routing queries using either training-free (e.g., GPT-4o) or training-based routers, run:
+To route queries with either a training-free router (e.g., GPT-5) or a training-based router, run:
 ```bash
 bash script/3_route.sh {model-name}
 ```
-Replace `{model-name}` with the appropriate router model. Supported options are `gpt`, `distilbert` and `t5-large`.
+Replace `{model-name}` with the router model to use. The supported training-free option is `gpt-5`; training-based options are `qwen3-vl-2b`, `internvl3_5-1b`, and `t5gemma-270m`.
 
 ## Evaluation
 
 To generate results for routed queries, run the following script:
 ```bash
 bash script/4_eval.sh \
-    --model_path {model-path} \
-    --router_model {router-model} \
+    --model-path {model-path} \
+    --router-model {router-model} \
     --target {target}
 ```
-* `{model-path}`: Path or identifier of the LVLM model to use (e.g., `OpenGVLab/InternVL2_5-8B`).
-* `{router-model}`: Router model to use for routing (same as in the routing stage).
+* `{model-path}`: Path or identifier of the LVLM model to use (e.g., `Qwen/Qwen3-VL-8B-Instruct`).
+* `{router-model}`: Router model name used in the routing stage (e.g., `gpt-5`, `qwen3-vl-2b`, `internvl3_5-1b`, or `t5gemma-270m`).
 * `{target}`: Target dataset for evaluation (e.g., `mmlu`).
 
 Use `bash script/4_eval.sh -h` to see all available options and descriptions.
@@ -79,8 +79,8 @@ Use `bash script/4_eval.sh -h` to see all available options and descriptions.
 Example:
 ```bash
 bash script/4_eval.sh \
-    --model_path OpenGVLab/InternVL2_5-8B \
-    --router_model distilbert \
+    --model-path Qwen/Qwen3-VL-8B-Instruct \
+    --router-model qwen3-vl-2b \
     --target mmlu
 ```
 

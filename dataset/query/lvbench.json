@@ -56,20 +56,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_239",
-        "question": "Who conducts the interview with Rodney Clark during the opening keynote at Cisco Live 2024 in Amsterdam?\n(A) The male host in the green suit\n(B) The hostess in a black suit\n(C) The male host in the blue suit\n(D) The hostess in the red suit",
-        "answer": "D",
-        "time_reference": [
-            830,
-            845
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_118",
         "question": "Which three animals are featured after the deer interact in the Botswana wildlife documentary on the 4K Relaxation Channel?\n(A) Three lions play with each other\n(B) Three leopard foxes play with each other\n(C) Three bat-eared foxes play with each other\n(D) Three deers play with each other",
         "answer": "C",
@@ -85,7 +71,7 @@
     },
     {
         "index": "lvbench_747",
-        "question": "What color is the bow tie on Miss Mantis's chest in the animated movie by \u54aa\u5495\u52a8\u6f2b MIGU Animation released in 2019?\n(A) Pink\n(B) Black\n(C) Green\n(D) Red",
+        "question": "What color is the bow tie on Miss Mantis's chest in the animated movie by 咪咕动漫 MIGU Animation released in 2019?\n(A) Pink\n(B) Black\n(C) Green\n(D) Red",
         "answer": "B",
         "time_reference": [
             2319,
@@ -337,7 +323,7 @@
     },
     {
         "index": "lvbench_731",
-        "question": "What does the scene transition to in the second cartoon after the boy, cat, and dog share their first meal with a trophy on the table in the continuous episodes from the classic Russian animation series by \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c?\n(A) The bedroom\n(B) The restaurant\n(C) The sand beach\n(D) The kitchen",
+        "question": "What does the scene transition to in the second cartoon after the boy, cat, and dog share their first meal with a trophy on the table in the continuous episodes from the classic Russian animation series by Союзмультфильм?\n(A) The bedroom\n(B) The restaurant\n(C) The sand beach\n(D) The kitchen",
         "answer": "C",
         "time_reference": [
             1556,
@@ -351,7 +337,7 @@
     },
     {
         "index": "lvbench_1092",
-        "question": "Which animal is the first to be seen playing with wood alone in the Village Style outdoor cooking video by K\u0259nd H\u0259yat\u0131, featuring fresh vegetables and meat in 2020?\n(A) The cow\n(B) The dog\n(C) The tiger\n(D) The duck",
+        "question": "Which animal is the first to be seen playing with wood alone in the Village Style outdoor cooking video by Kənd Həyatı, featuring fresh vegetables and meat in 2020?\n(A) The cow\n(B) The dog\n(C) The tiger\n(D) The duck",
         "answer": "B",
         "time_reference": [
             25,
@@ -388,20 +374,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/vaL_vSdZKZo.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_663",
-        "question": "What actions do the ladybugs undertake at dusk in the animated adventure featuring tiny creatures released by Wezzi in April 2023?\n(A) They drink coconut juice and eat coconut meat\n(B) They lift a coconut and smash it on the ground. Then they drink coconut juice and eat coconut meat\n(C) They lift a coconut together\n(D) They lift a coconut and smash it on the ground",
-        "answer": "C",
-        "time_reference": [
-            3701,
-            3749
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -1106,20 +1078,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_520",
-        "question": "What is the dominant color in the scene when \"Kiss Me\" is performed during the best blind auditions of 2023 on The Voice?\n(A) Blue\n(B) Red\n(C) Black\n(D) Green",
-        "answer": "D",
-        "time_reference": [
-            4231,
-            4231
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_1113",
         "question": "What is the name of the store that opens earlier than the Taiyaki shop in Delight's 2023 video on making Korean style Taiyaki ice cream?\n(A) Supermarket\n(B) Clothing store\n(C) Cafe\n(D) Bookshop",
         "answer": "B",
@@ -1373,7 +1331,7 @@
     },
     {
         "index": "lvbench_729",
-        "question": "What unfolds for the family at the railway station in the classic episodes of the \u041f\u0440\u043e\u0441\u0442\u043e\u043a\u0432\u0430\u0448\u0438\u043d\u043e series from \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c?\n(A) The child leaves his parents and takes the train\n(B) The child leaves his parents and takes the bus\n(C) The child takes the train with his parent\n(D) The child takes the subway with his parent",
+        "question": "What unfolds for the family at the railway station in the classic episodes of the Простоквашино series from Союзмультфильм?\n(A) The child leaves his parents and takes the train\n(B) The child leaves his parents and takes the bus\n(C) The child takes the train with his parent\n(D) The child takes the subway with his parent",
         "answer": "A",
         "time_reference": [
             1274,
@@ -1443,7 +1401,7 @@
     },
     {
         "index": "lvbench_721",
-        "question": "What unfolds following the initial encounter between the boy, the cat, and the dog in the classic series collection from \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c?\n(A) They clean the house\n(B) They meet the guest\n(C) They wash the dish\n(D) They eat the food",
+        "question": "What unfolds following the initial encounter between the boy, the cat, and the dog in the classic series collection from Союзмультфильм?\n(A) They clean the house\n(B) They meet the guest\n(C) They wash the dish\n(D) They eat the food",
         "answer": "A",
         "time_reference": [
             302,
@@ -1555,7 +1513,7 @@
     },
     {
         "index": "lvbench_755",
-        "question": "In the animated classic featured on \u54aa\u5495\u52a8\u6f2b MIGU Animation, how does the snake discover the arrival of the orange calabash boy?\n(A) The leaves\n(B) The bloodstain\n(C) The markers\n(D) The footprints",
+        "question": "In the animated classic featured on 咪咕动漫 MIGU Animation, how does the snake discover the arrival of the orange calabash boy?\n(A) The leaves\n(B) The bloodstain\n(C) The markers\n(D) The footprints",
         "answer": "D",
         "time_reference": [
             1471,
@@ -1667,7 +1625,7 @@
     },
     {
         "index": "lvbench_1148",
-        "question": "In Nami\u306e\u304f\u3089\u3057's Japanese morning routine vlog from January 2023, how much water does the vlogger add to the bowl at 24:37?\n(A) Near 300ml\n(B) Near 50ml\n(C) Near 100ml\n(D) Near 200ml",
+        "question": "In Namiのくらし's Japanese morning routine vlog from January 2023, how much water does the vlogger add to the bowl at 24:37?\n(A) Near 300ml\n(B) Near 50ml\n(C) Near 100ml\n(D) Near 200ml",
         "answer": "C",
         "time_reference": [
             1477,
@@ -1704,20 +1662,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/rk24OUu_kJQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_504",
-        "question": "Who is the judge positioned second to the left from the camera's perspective during the opening performance in The Voice's best blind auditions of 2023?\n(A) MICHAL\n(B) GWEN\n(C) JAMES\n(D) NIALL",
-        "answer": "D",
-        "time_reference": [
-            41,
-            41
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -2101,7 +2045,7 @@
     },
     {
         "index": "lvbench_1103",
-        "question": "What can be found in the pocket of the shop assistant's clothing in the video about making Korean-style taiyaki ice cream from \ub51c\ub77c\uc774\ud2b8 Delight in 2023?\n(A) A lollipop\n(B) A pencil\n(C) A protein bar\n(D) A signature pen",
+        "question": "What can be found in the pocket of the shop assistant's clothing in the video about making Korean-style taiyaki ice cream from 딜라이트 Delight in 2023?\n(A) A lollipop\n(B) A pencil\n(C) A protein bar\n(D) A signature pen",
         "answer": "D",
         "time_reference": [
             266,
@@ -2124,20 +2068,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/Xjf5N9S3jAA.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_668",
-        "question": "How many mantises attack the two ladybugs during the shoreline scene in the animated insect adventure video from 2023 on Wezzi's channel?\n(A) 5\n(B) 1\n(C) 4\n(D) 3",
-        "answer": "C",
-        "time_reference": [
-            4248,
-            4250
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -2296,20 +2226,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_516",
-        "question": "Which coach is the first to turn their chair for the contestant with curly hair, glasses, and a white and blue sweatshirt in the 2023 highlights of The Voice?\n(A) Benas\n(B) Monika Liu\n(C) Justina\n(D) Mantas",
-        "answer": "D",
-        "time_reference": [
-            2683,
-            2683
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_334",
         "question": "In Zane Travel's 2023 video about experiencing Tokyo, what does the vlogger order at the restaurant during their first time in Japan?\n(A) Sushi\n(B) Hitsumabushi\n(C) Yakiniku\n(D) Spicy ramen",
         "answer": "D",
@@ -2376,20 +2292,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/2zkJFv-ro4A.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_249",
-        "question": "How many chairs can be seen in the image at the 01:42 timestamp during the opening keynote of Cisco's live broadcast from Amsterdam in 2024?\n(A) 3\n(B) 0\n(C) 1\n(D) 2",
-        "answer": "A",
-        "time_reference": [
-            102,
-            104
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -2474,20 +2376,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/sk00epALZps.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_144",
-        "question": "What activity is Samir Boulahya engaged in when his name is initially shown in the German Mercedes tuning documentary by WELT?\n(A) He is replacing the exhaust pipe on his car\n(B) He is changing the tires on the car\n(C) He is replacing the brake pads on the car\n(D) He is replacing the wheels on the car",
-        "answer": "C",
-        "time_reference": [
-            620,
-            660
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -2632,20 +2520,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_669",
-        "question": "How many insects are on the board upon arriving at the caterpillar kingdom in the animated adventure from Wezzi uploaded in 2023?\n(A) 0\n(B) 5\n(C) 3\n(D) 4",
-        "answer": "D",
-        "time_reference": [
-            4257,
-            4297
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_30",
         "question": "What events unfold between 35:52 and 36:41 in the nostalgic animated feature presented by Old Game & Anime in 2021?\n(A) The woman goes to meet the man barefoot, but she is stopped by other people\n(B) The woman goes to meet the man, but she is stopped by other people\n(C) The woman goes to meet the man barefoot, but she is stopped by a car\n(D) The woman goes to meet the man, but she is stopped by some dancers",
         "answer": "B",
@@ -2675,7 +2549,7 @@
     },
     {
         "index": "lvbench_1146",
-        "question": "At 22:35 in Nami\u306e\u304f\u3089\u3057's morning routine vlog from Japan, what time is shown on the clock?\n(A) 5:09\n(B) 4:09\n(C) 5:46\n(D) 4:46",
+        "question": "At 22:35 in Namiのくらし's morning routine vlog from Japan, what time is shown on the clock?\n(A) 5:09\n(B) 4:09\n(C) 5:46\n(D) 4:46",
         "answer": "D",
         "time_reference": [
             1355,
@@ -2703,7 +2577,7 @@
     },
     {
         "index": "lvbench_728",
-        "question": "Who shows up when the boy falls sick and the cat opens the door in the classic episodes from \u041c\u0443\u043b\u044c\u0442\u0438\u043a\u0438 \u0441\u0442\u0443\u0434\u0438\u0438 \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c?\n(A) The couple\n(B) The stranger\n(C) The old man\n(D) The bird",
+        "question": "Who shows up when the boy falls sick and the cat opens the door in the classic episodes from Мультики студии Союзмультфильм?\n(A) The couple\n(B) The stranger\n(C) The old man\n(D) The bird",
         "answer": "A",
         "time_reference": [
             917,
@@ -2898,20 +2772,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_243",
-        "question": "What text is found in the orange circle in the image at 69:20 during the Cisco Live Amsterdam 2024 keynote presentation?\n(A) WEB\n(B) APP\n(C) AWS\n(D) PCI",
-        "answer": "C",
-        "time_reference": [
-            4158,
-            4170
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_65",
         "question": "Who directed the official full movie of Spookiz, released in 2020?\n(A) Bong Ho Kim\n(B) Bong Joon Ho\n(C) Mike Yangtzi\n(D) Jin Kum",
         "answer": "A",
@@ -2922,20 +2782,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/HfEVEGf1A8Q.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_510",
-        "question": "Which judge makes the final turn during the ninth performance in the best blind auditions of The Voice 2023?\n(A) BILL+TOM\n(B) Blocked\n(C) SHIRIN\n(D) GIOVANNI",
-        "answer": "B",
-        "time_reference": [
-            1020,
-            1050
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -2997,7 +2843,7 @@
     },
     {
         "index": "lvbench_742",
-        "question": "After discovering a row of switches, which one does Sheriff Black Cat activate in the movie version by \u54aa\u5495\u52a8\u6f2b MIGU Animation from 2019?\n(A) Bottom switch\n(B) Red switch\n(C) Yellow switch\n(D) Top switch",
+        "question": "After discovering a row of switches, which one does Sheriff Black Cat activate in the movie version by 咪咕动漫 MIGU Animation from 2019?\n(A) Bottom switch\n(B) Red switch\n(C) Yellow switch\n(D) Top switch",
         "answer": "C",
         "time_reference": [
             719,
@@ -3038,20 +2884,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_164",
-        "question": "What is the nationality of the filmmaker who directs the Best International Feature Film in the Oscars 2024 full show on Event Horizon?\n(A) Italy\n(B) Japan\n(C) Spain\n(D) United Kingdom",
-        "answer": "D",
-        "time_reference": [
-            2133,
-            2204
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/t-RtDI2RWQs.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_471",
         "question": "What occurs at the start of the Australian Open 2017 Final match between Serena and Venus Williams on Australian Open TV?\n(A) The players are warming up now\n(B) Serena to serve\n(C) A player is practicing racquet\n(D) The players are waiting",
         "answer": "C",
@@ -3076,20 +2908,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/tH_5YbklevQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_161",
-        "question": "Which film is spoofed by the host during his initial appearance at the 96th edition of the annual Hollywood awards ceremony in 2024?\n(A) Barbie\n(B) American Fiction\n(C) Killers of the Flower Moon\n(D) Oppenheim",
-        "answer": "A",
-        "time_reference": [
-            65,
-            90
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/t-RtDI2RWQs.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -3151,7 +2969,7 @@
     },
     {
         "index": "lvbench_754",
-        "question": "When does the second calabash boy emerge in the cinematic version of the childhood classic re-released by \u54aa\u5495\u52a8\u6f2b in 2022?\n(A) 19:39\n(B) 18:39\n(C) 20:39\n(D) 21:39",
+        "question": "When does the second calabash boy emerge in the cinematic version of the childhood classic re-released by 咪咕动漫 in 2022?\n(A) 19:39\n(B) 18:39\n(C) 20:39\n(D) 21:39",
         "answer": "C",
         "time_reference": [
             1225,
@@ -3249,7 +3067,7 @@
     },
     {
         "index": "lvbench_1104",
-        "question": "In the Korean street food video about making taiyaki ice cream released by \ub51c\ub77c\uc774\ud2b8 Delight in 2023, what is the first ingredient added to the mixing bowl that isn't flour?\n(A) Milk\n(B) Water\n(C) Egg\n(D) Butter",
+        "question": "In the Korean street food video about making taiyaki ice cream released by 딜라이트 Delight in 2023, what is the first ingredient added to the mixing bowl that isn't flour?\n(A) Milk\n(B) Water\n(C) Egg\n(D) Butter",
         "answer": "B",
         "time_reference": [
             358,
@@ -3360,20 +3178,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_186",
-        "question": "What is the reason for the letters appearing on the screen when the Rock makes his entrance with another presenter during the 96th Academy Awards on Event Horizon?\n(A) It is the translation of an audio that is not English\n(B) It is the auto-generated English subtitles\n(C) It is the description of the next award name\n(D) It is the description of the presenters",
-        "answer": "A",
-        "time_reference": [
-            2123,
-            2123
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/t-RtDI2RWQs.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_546",
         "question": "How many piles does the woman in red divide the cards into during the animal talent auditions in a December 2023 video from Top Talent?\n(A) 6\n(B) 2\n(C) 4\n(D) 3",
         "answer": "C",
@@ -3389,7 +3193,7 @@
     },
     {
         "index": "lvbench_781",
-        "question": "What payment method is mentioned at the end of the full documentary exploring Japan\u2019s rarest foods by the Best Ever Food Review Show?\n(A) Alipay\n(B) RPay\n(C) Apple Pay\n(D) WeChat Pay",
+        "question": "What payment method is mentioned at the end of the full documentary exploring Japan’s rarest foods by the Best Ever Food Review Show?\n(A) Alipay\n(B) RPay\n(C) Apple Pay\n(D) WeChat Pay",
         "answer": "B",
         "time_reference": [
             5975,
@@ -3496,20 +3300,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/2LH3JCGkEBU.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_142",
-        "question": "What type of Mercedes-Benz is the black car featured in the documentary about BRABUS tuning from Germany by WELT Documentary?\n(A) Maybach\n(B) AMG GT\n(C) C class\n(D) E class",
-        "answer": "A",
-        "time_reference": [
-            80,
-            80
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -3683,7 +3473,7 @@
     },
     {
         "index": "lvbench_913",
-        "question": "In the 2023 Nobel Prize award ceremony video, which winner is distinguished by a different color than the others?\n(A) Katalin Karik\u00f3\n(B) \u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0415\u043a\u0438\u043c\u043e\u0432\n(C) Ferenc Krausz\n(D) Anne L'Huillier",
+        "question": "In the 2023 Nobel Prize award ceremony video, which winner is distinguished by a different color than the others?\n(A) Katalin Karikó\n(B) Алексей Екимов\n(C) Ferenc Krausz\n(D) Anne L'Huillier",
         "answer": "D",
         "time_reference": [
             3002,
@@ -3780,20 +3570,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_509",
-        "question": "Which instrument does the eighth contestant play during the 2023 blind auditions on The Voice?\n(A) Piano\n(B) Cello\n(C) Erhu\n(D) Guitar",
-        "answer": "D",
-        "time_reference": [
-            853,
-            853
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_1361",
         "question": "How many men appear on screen between Brittany and the male host during the Maury Show's paternity reveal compilation in 2022?\n(A) 3\n(B) 4\n(C) 2\n(D) 1",
         "answer": "C",
@@ -3879,7 +3655,7 @@
     },
     {
         "index": "lvbench_1140",
-        "question": "Why does the vlogger shake the white bag during the early morning routine in Nami\u306e\u304f\u3089\u3057's winter vlog?\n(A) To get the tomatoes mixed up with the seasoning\n(B) To crash the ice\n(C) To get the potatoes mixed up with the seasoning\n(D) Just for fun",
+        "question": "Why does the vlogger shake the white bag during the early morning routine in Namiのくらし's winter vlog?\n(A) To get the tomatoes mixed up with the seasoning\n(B) To crash the ice\n(C) To get the potatoes mixed up with the seasoning\n(D) Just for fun",
         "answer": "C",
         "time_reference": [
             1015,
@@ -3888,34 +3664,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/jp2M1hIEtsk.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_156",
-        "question": "What color gloves does the mechanic wear while removing the standard exhaust in the documentary about German Mercedes tuning by WELT?\n(A) Blue\n(B) Black\n(C) Red\n(D) Purple",
-        "answer": "A",
-        "time_reference": [
-            287,
-            287
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_235",
-        "question": "Who is the final moderator to speak in the opening keynote at Cisco's 2024 Amsterdam event broadcast?\n(A) The hostess of the green skirt\n(B) The male host in a black suit\n(C) The male host in the blue jacket\n(D) The hostess in a green suit",
-        "answer": "A",
-        "time_reference": [
-            6,
-            14
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -4159,7 +3907,7 @@
     },
     {
         "index": "lvbench_735",
-        "question": "What color does the rabbit turn into after the yellow box is swapped out for the cat in the classic animated series on \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c's channel?\n(A) Pink\n(B) Yellow\n(C) White\n(D) Blue",
+        "question": "What color does the rabbit turn into after the yellow box is swapped out for the cat in the classic animated series on Союзмультфильм's channel?\n(A) Pink\n(B) Yellow\n(C) White\n(D) Blue",
         "answer": "D",
         "time_reference": [
             1975,
@@ -4256,20 +4004,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_671",
-        "question": "What is depicted on the stone at the construction site at the end of the animated adventure in Wezzi's 2023 video about tiny creatures?\n(A) Green dye\n(B) Moss\n(C) Caterpillar\n(D) Little grass",
-        "answer": "C",
-        "time_reference": [
-            4689,
-            4700
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_498",
         "question": "Who scored the initial point in the third set of the men's volleyball gold medal match between Italy and Brazil in the Olympics' featured throwback match from Rio 2016?\n(A) China\n(B) Italy\n(C) Brazil\n(D) Japan",
         "answer": "C",
@@ -4354,20 +4088,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_515",
-        "question": "What is the blonde woman's reaction or action during Joao Duarte's performance in the 2023 compilation of impressive auditions on The Voice Global?\n(A) She smiles\n(B) She sat down\n(C) She crys\n(D) She is angry",
-        "answer": "C",
-        "time_reference": [
-            2085,
-            2100
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_1293",
         "question": "How many laps are run in the Olympic 10,000m race where Mo Farah claimed gold in the 2012 London Games?\n(A) 25\n(B) 1\n(C) 24\n(D) 10",
         "answer": "A",
@@ -4425,7 +4145,7 @@
     },
     {
         "index": "lvbench_1141",
-        "question": "During Nami\u306e\u304f\u3089\u3057's early morning routine in Japan, how many sandwich pieces does she eat in the 2023 vlog?\n(A) Two\n(B) One\n(C) Three\n(D) All",
+        "question": "During Namiのくらし's early morning routine in Japan, how many sandwich pieces does she eat in the 2023 vlog?\n(A) Two\n(B) One\n(C) Three\n(D) All",
         "answer": "A",
         "time_reference": [
             1050,
@@ -4634,20 +4354,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_660",
-        "question": "What aspect of the sailing seems counterintuitive in the 2023 Wezzi video featuring tiny mandibles from a distant jungle?\n(A) The boat is unbalanced\n(B) The speed is high\n(C) The boat is small\n(D) The power is balloons",
-        "answer": "B",
-        "time_reference": [
-            2365,
-            2420
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_639",
         "question": "Is the protagonist depicted wearing glasses in this special edition episode of Blue Eye Samurai from Netflix?\n(A) No\n(B) Yes, only once\n(C) Yes, all the time\n(D) Yes, most of the time",
         "answer": "B",
@@ -4733,7 +4439,7 @@
     },
     {
         "index": "lvbench_1170",
-        "question": "What frustrates Lin Dan at 27:10 in the full replay of the Rio 2016 badminton semi-finals between Lee Chong Wei and Lin Dan featured in the Olympics channel\u2019s throwback video?\n(A) He fails to beat the shuttlecock cross the net\n(B) He beats the shuttlecock out of the bounds\n(C) He  fails to return the shuttlecock before it lands\n(D) He fails to catch the shuttlecock",
+        "question": "What frustrates Lin Dan at 27:10 in the full replay of the Rio 2016 badminton semi-finals between Lee Chong Wei and Lin Dan featured in the Olympics channel’s throwback video?\n(A) He fails to beat the shuttlecock cross the net\n(B) He beats the shuttlecock out of the bounds\n(C) He  fails to return the shuttlecock before it lands\n(D) He fails to catch the shuttlecock",
         "answer": "B",
         "time_reference": [
             1590,
@@ -4789,7 +4495,7 @@
     },
     {
         "index": "lvbench_734",
-        "question": "What occurs after the cat replaces the yellow box in the classic \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c animation series streamed in 2014?\n(A) The dog chases the rabbit\n(B) The dog chases the bird\n(C) The cat chases the rabbit\n(D) The cat chases the cow",
+        "question": "What occurs after the cat replaces the yellow box in the classic Союзмультфильм animation series streamed in 2014?\n(A) The dog chases the rabbit\n(B) The dog chases the bird\n(C) The cat chases the rabbit\n(D) The cat chases the cow",
         "answer": "A",
         "time_reference": [
             1975,
@@ -4859,7 +4565,7 @@
     },
     {
         "index": "lvbench_724",
-        "question": "Why does the mustached man pursue the bird as the trio of boy, cat, and dog return with a chest, shovel, and pickaxe in the continuous \u041f\u0440\u043e\u0441\u0442\u043e\u043a\u0432\u0430\u0448\u0438\u043d\u043e series by \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c?\n(A) The bird holds his hat\n(B) The bird holds his coin\n(C) The bird holds his box\n(D) The bird holds his letter",
+        "question": "Why does the mustached man pursue the bird as the trio of boy, cat, and dog return with a chest, shovel, and pickaxe in the continuous Простоквашино series by Союзмультфильм?\n(A) The bird holds his hat\n(B) The bird holds his coin\n(C) The bird holds his box\n(D) The bird holds his letter",
         "answer": "B",
         "time_reference": [
             494,
@@ -4873,7 +4579,7 @@
     },
     {
         "index": "lvbench_1135",
-        "question": "What brand is the scented candle featured in Nami\u306e\u304f\u3089\u3057's winter morning routine vlog in Japan?\n(A) London\n(B) Cire Trudon\n(C) Diptyque\n(D) Jo Malone",
+        "question": "What brand is the scented candle featured in Namiのくらし's winter morning routine vlog in Japan?\n(A) London\n(B) Cire Trudon\n(C) Diptyque\n(D) Jo Malone",
         "answer": "D",
         "time_reference": [
             75,
@@ -5264,20 +4970,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_236",
-        "question": "What text is displayed on the top dark blue board at 01:31 during the live broadcast of Cisco Live 2024 Amsterdam's opening keynote?\n(A) Conference City\n(B) Summit Forum\n(C) Meeting Village\n(D) Meet the Engineer",
-        "answer": "C",
-        "time_reference": [
-            91,
-            91
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_261",
         "question": "What pose does the vlogger strike for a photo at the 12:53 mark in Kallmekris's 2022 Iceland travel vlog?\n(A) Hands on hips\n(B) Lean on the bridge\n(C) Scissorhands\n(D) Open arms",
         "answer": "D",
@@ -5418,20 +5110,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_506",
-        "question": "How many coaches turn their chairs for the second contestant in the best blind auditions on The Voice in 2023?\n(A) One referee turns around for him\n(B) Two referees turn around for him\n(C) No referee turns around for him\n(D) Three referees turn around for him",
-        "answer": "A",
-        "time_reference": [
-            135,
-            140
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_403",
         "question": "After organizing the receipts, what does the head chef do next in the 2023 high-end restaurant experience video by Fallow?\n(A) He fetchs a dish\n(B) He tastes a dish\n(C) He puts the dish on a plate\n(D) He cooks a dish",
         "answer": "C",
@@ -5474,20 +5152,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_507",
-        "question": "What instrument is being played by the man accompanying the girl in a blue sweetheart bandeau top and wide, holey jeans, during her performance on The Voice's best blind auditions of 2023?\n(A) Erhu\n(B) Cello\n(C) Piano\n(D) Guitar",
-        "answer": "C",
-        "time_reference": [
-            198,
-            198
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_211",
         "question": "What events unfold during the time span of 87:02-88:22 in the full show of Disney's Little Mermaid by Iconium Media from 2018?\n(A) The prince and the mermaid dance together\n(B) The prince and the mermaid kiss\n(C) The prince and the mermaid eat together\n(D) The prince and the mermaid hold the wedding",
         "answer": "A",
@@ -5517,7 +5181,7 @@
     },
     {
         "index": "lvbench_1099",
-        "question": "At the 43:08 timestamp, what ingredient does the woman add to the pot during the village-style outdoor cooking demonstration by K\u0259nd H\u0259yat\u0131?\n(A) Carrot\n(B) Coriander\n(C) Tomato\n(D) Pepper",
+        "question": "At the 43:08 timestamp, what ingredient does the woman add to the pot during the village-style outdoor cooking demonstration by Kənd Həyatı?\n(A) Carrot\n(B) Coriander\n(C) Tomato\n(D) Pepper",
         "answer": "B",
         "time_reference": [
             2585,
@@ -5768,20 +5432,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_157",
-        "question": "What is the color of the car in the German Mercedes tuning documentary where mechanics switch from a standard exhaust to a valve-controlled system?\n(A) Silver gray\n(B) Black\n(C) White\n(D) Red",
-        "answer": "A",
-        "time_reference": [
-            323,
-            323
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_677",
         "question": "What is the first human girl holding during her initial appearance in Greg Stevens's upload of the 1986 film involving Blinkins?\n(A) A bag\n(B) A doll\n(C) A mobile phone\n(D) A photo",
         "answer": "B",
@@ -5834,34 +5484,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/TJR1oYDDTwg.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_667",
-        "question": "How do the two ladybugs manage to evade the mantis attack in the 2023 animated adventure uploaded by Wezzi?\n(A) Board a train under the cover of the ant\n(B) Board a rocket under the cover from the spider\n(C) Board a spaceship under the cover from the ant\n(D) Board a small boat under the cover from the spider",
-        "answer": "D",
-        "time_reference": [
-            4215,
-            4236
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_158",
-        "question": "What expression does the man have at 06:01 in the WELT Documentary about Mercedes tuning by BRABUS in Germany?\n(A) Numb\n(B) Cry\n(C) Angry\n(D) Laugh",
-        "answer": "D",
-        "time_reference": [
-            361,
-            361
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -6231,7 +5853,7 @@
     },
     {
         "index": "lvbench_768",
-        "question": "Which animal is the first to be frozen in the animated film revisiting classic childhood memories released by \u54aa\u5495\u52a8\u6f2b in early 2022?\n(A) A squirrel\n(B) A bird\n(C) A deer\n(D) A pangolin",
+        "question": "Which animal is the first to be frozen in the animated film revisiting classic childhood memories released by 咪咕动漫 in early 2022?\n(A) A squirrel\n(B) A bird\n(C) A deer\n(D) A pangolin",
         "answer": "C",
         "time_reference": [
             1170,
@@ -6254,20 +5876,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/ihfjEFGdZdc.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_240",
-        "question": "Who is interviewed before Nieves Navarro during the live broadcast of Cisco's 2024 Amsterdam Opening Keynote?\n(A) Britney Bartlett\n(B) Steve Multer\n(C) Rodney Clark\n(D) Carrie Palin",
-        "answer": "D",
-        "time_reference": [
-            1204,
-            1225
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -6296,20 +5904,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/7HjNIPIgUg4.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_248",
-        "question": "Who is the host wearing a green skirt during the opening keynote at Cisco's 2024 Amsterdam live broadcast event?\n(A) Steve Multer\n(B) Petek Ergul\n(C) Nish Parkar\n(D) Carrie Palin",
-        "answer": "C",
-        "time_reference": [
-            53,
-            55
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -6352,20 +5946,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/RbpKkvlHYTw.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_172",
-        "question": "Which animated film wins the Best Animated Feature award during the 96th Academy Awards in the Oscars 2024 full show by Event Horizon?\n(A) Toy Story 4\n(B) Zootopia\n(C) Spider-Man: Into the Spider-Verse\n(D) The Boy and the Heron",
-        "answer": "D",
-        "time_reference": [
-            1410,
-            1503
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/t-RtDI2RWQs.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -6436,20 +6016,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/evYm0cELO3I.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_143",
-        "question": "What takes place during the 04:45-05:25 segment of the full documentary about Mercedes tuning by BRABUS on the WELT Documentary channel?\n(A) They replace the exhaust pipe of the car\n(B) They replace the tail lights of the car\n(C) They change tires on cars\n(D) They replace the brake pads on the car",
-        "answer": "A",
-        "time_reference": [
-            285,
-            325
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -6553,7 +6119,7 @@
     },
     {
         "index": "lvbench_1145",
-        "question": "In Nami\u306e\u304f\u3089\u3057's winter morning routine vlog, how many flowers does the vlogger draw in their 2023 video?\n(A) Seven\n(B) Nineteen\n(C) Three\n(D) Thirteen",
+        "question": "In Namiのくらし's winter morning routine vlog, how many flowers does the vlogger draw in their 2023 video?\n(A) Seven\n(B) Nineteen\n(C) Three\n(D) Thirteen",
         "answer": "B",
         "time_reference": [
             1225,
@@ -6567,7 +6133,7 @@
     },
     {
         "index": "lvbench_740",
-        "question": "How many officers are seen driving vehicles in the 2019 release of the animated film featuring the black cat sheriff by \u54aa\u5495\u52a8\u6f2b?\n(A) 6\n(B) 4\n(C) 5\n(D) 7",
+        "question": "How many officers are seen driving vehicles in the 2019 release of the animated film featuring the black cat sheriff by 咪咕动漫?\n(A) 6\n(B) 4\n(C) 5\n(D) 7",
         "answer": "A",
         "time_reference": [
             605,
@@ -6604,20 +6170,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/vaL_vSdZKZo.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_665",
-        "question": "What method do the ant and the spider use to escape the shark's stomach in the animated adventure uploaded by Wezzi in 2023?\n(A) By climbing shark's esophagus\n(B) By watching a movie\n(C) By breaking shark's tooth\n(D) By playing some music",
-        "answer": "D",
-        "time_reference": [
-            3799,
-            3807
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -6665,7 +6217,7 @@
     },
     {
         "index": "lvbench_452",
-        "question": "Who takes Arnold's place during the 2022-23 Emirates FA Cup Fourth Round match between Brighton & Hove Albion and Liverpool as featured on The Emirates FA Cup channel?\n(A) Henderson\n(B) Jones\n(C) N\u00fa\u00f1ez\n(D) Milner",
+        "question": "Who takes Arnold's place during the 2022-23 Emirates FA Cup Fourth Round match between Brighton & Hove Albion and Liverpool as featured on The Emirates FA Cup channel?\n(A) Henderson\n(B) Jones\n(C) Núñez\n(D) Milner",
         "answer": "C",
         "time_reference": [
             3649,
@@ -6763,7 +6315,7 @@
     },
     {
         "index": "lvbench_1093",
-        "question": "Could you describe what takes place between 02:03 and 04:09 during the outdoor kazan cooking session with fresh vegetables and meat shared by K\u0259nd H\u0259yat\u0131?\n(A) The two people talk with each other, pick beech nut\n(B) The two people cook and eat, talk with each other\n(C) The two people pick beech nut, talk with each other, play with the dog\n(D) The two people pick beech nut, play with the dog",
+        "question": "Could you describe what takes place between 02:03 and 04:09 during the outdoor kazan cooking session with fresh vegetables and meat shared by Kənd Həyatı?\n(A) The two people talk with each other, pick beech nut\n(B) The two people cook and eat, talk with each other\n(C) The two people pick beech nut, talk with each other, play with the dog\n(D) The two people pick beech nut, play with the dog",
         "answer": "D",
         "time_reference": [
             123,
@@ -6772,20 +6324,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/LLSJrEgOOtw.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_659",
-        "question": "What is inside the cabin when an ant and a spider go sailing in the Minuscule Mandibles adventure from Wezzi in 2023?\n(A) IMac\n(B) IPod\n(C) IPad\n(D) IPhone",
-        "answer": "B",
-        "time_reference": [
-            2183,
-            2183
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -6945,7 +6483,7 @@
     },
     {
         "index": "lvbench_782",
-        "question": "What liquid is poured over the grilled chicken at the start of Best Ever Food Review Show\u2019s documentary exploring the culinary journey from street food to unique dishes in Pakistan?\n(A) Orange juice\n(B) Homemade Masala\n(C) Lemon juice\n(D) Pepper water",
+        "question": "What liquid is poured over the grilled chicken at the start of Best Ever Food Review Show’s documentary exploring the culinary journey from street food to unique dishes in Pakistan?\n(A) Orange juice\n(B) Homemade Masala\n(C) Lemon juice\n(D) Pepper water",
         "answer": "B",
         "time_reference": [
             69,
@@ -7225,7 +6763,7 @@
     },
     {
         "index": "lvbench_722",
-        "question": "Who is the first to appear when the boy, cat, and dog start cleaning the house in the classic episodes of \u041f\u0440\u043e\u0441\u0442\u043e\u043a\u0432\u0430\u0448\u0438\u043d\u043e from \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c?\n(A) The rabbit\n(B) The old man\n(C) The woman\n(D) The couple",
+        "question": "Who is the first to appear when the boy, cat, and dog start cleaning the house in the classic episodes of Простоквашино from Союзмультфильм?\n(A) The rabbit\n(B) The old man\n(C) The woman\n(D) The couple",
         "answer": "B",
         "time_reference": [
             329,
@@ -7351,7 +6889,7 @@
     },
     {
         "index": "lvbench_723",
-        "question": "What action does the mustached man take when the boy, cat, and dog return with a treasure chest, shovel, and pickaxe in the classic Russian animation series by \u0421\u043e\u044e\u0437\u043c\u0443\u043b\u044c\u0442\u0444\u0438\u043b\u044c\u043c from 2014?\n(A) He chases a cat\n(B) He chases a cow\n(C) He chases a dog\n(D) He chases a bird",
+        "question": "What action does the mustached man take when the boy, cat, and dog return with a treasure chest, shovel, and pickaxe in the classic Russian animation series by Союзмультфильм from 2014?\n(A) He chases a cat\n(B) He chases a cow\n(C) He chases a dog\n(D) He chases a bird",
         "answer": "D",
         "time_reference": [
             494,
@@ -7602,20 +7140,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_664",
-        "question": "What can be inferred about the interaction between the ladybugs and the coconut in the animated adventure featuring tiny creatures from the lost jungle, uploaded by Wezzi in April 2023?\n(A) The coconut is hard. From sunset to late night, the ladybugs can not open it\n(B) The coconut is hard. From noon to sunset, the ladybugs can not open it\n(C) The whole process takes a long time, from sunset to late night\n(D) The whole process takes a long time, from noon to sunset",
-        "answer": "D",
-        "time_reference": [
-            3654,
-            3752
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_894",
         "question": "At the beginning of the 2018 Nobel Prize Award Ceremony, which side of the stage was unoccupied?\n(A) Both first rows of left and right\n(B) First row on the left\n(C) Second row on the left\n(D) There was no one",
         "answer": "A",
@@ -7700,20 +7224,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_171",
-        "question": "Which film was primarily directed by Kemp Powers that was discussed during the 96th Academy Awards show by Event Horizon in 2024?\n(A) The film that wins the Animated Feature Film\n(B) The film that is nominated for but does not win the International Feature Film\n(C) The film that is nominated for but does not win the Animated Feature Film\n(D) The film that wins the International Feature Film",
-        "answer": "C",
-        "time_reference": [
-            1478,
-            1478
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/t-RtDI2RWQs.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_598",
         "question": "What occurs just prior to Tawanna hugging Tyisha in the 2022 episode of The Maury Show on Nosey's channel?\n(A) Cory scolds Tyisha\n(B) Tawanna hugs Cory\n(C) Tawanna kisses Tyisha\n(D) Cory hugs Tyisha",
         "answer": "D",
@@ -7771,7 +7281,7 @@
     },
     {
         "index": "lvbench_1083",
-        "question": "Who does the vlogger encounter from BigBang at the conclusion of their MADE concert experience in JREKML\u2019s 2015 vlog?\n(A) Daesung\n(B) G-dragon\n(C) Taeyang\n(D) T.O.P",
+        "question": "Who does the vlogger encounter from BigBang at the conclusion of their MADE concert experience in JREKML’s 2015 vlog?\n(A) Daesung\n(B) G-dragon\n(C) Taeyang\n(D) T.O.P",
         "answer": "C",
         "time_reference": [
             2029,
@@ -8148,20 +7658,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_662",
-        "question": "What is the weather like at the specific time 59:55-59:57 in the 'Minuscule Mandibles' video uploaded by Wezzi in 2023?\n(A) Hazy\n(B) Snowy\n(C) Sunny\n(D) Rainy",
-        "answer": "D",
-        "time_reference": [
-            3595,
-            3597
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_793",
         "question": "Which animal does Kareem care for in the Best Ever Food Review Show's documentary about exploring Pakistani cuisine and its intriguing street and unusual foods from 2022?\n(A) Dog\n(B) Panda\n(C) Sheep\n(D) Yak",
         "answer": "D",
@@ -8233,7 +7729,7 @@
     },
     {
         "index": "lvbench_1136",
-        "question": "How many flowers are placed in the cylindrical bottle during Nami\u306e\u304f\u3089\u3057's early morning routine vlog in Japan?\n(A) Two\n(B) One\n(C) Four\n(D) Three",
+        "question": "How many flowers are placed in the cylindrical bottle during Namiのくらし's early morning routine vlog in Japan?\n(A) Two\n(B) One\n(C) Four\n(D) Three",
         "answer": "C",
         "time_reference": [
             560,
@@ -8289,7 +7785,7 @@
     },
     {
         "index": "lvbench_1115",
-        "question": "What is the main color theme of the Taiyaki shop featured in \ub51c\ub77c\uc774\ud2b8's Korean street food video from 2023?\n(A) Black\n(B) Orange\n(C) Red\n(D) Green",
+        "question": "What is the main color theme of the Taiyaki shop featured in 딜라이트's Korean street food video from 2023?\n(A) Black\n(B) Orange\n(C) Red\n(D) Green",
         "answer": "B",
         "time_reference": [
             13,
@@ -8386,20 +7882,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_149",
-        "question": "What is the first set of tools used by the woman with black glasses and silver earrings in the BRABUS - Mercedes tuning documentary from WELT?\n(A) Scissors\n(B) Knife\n(C) Pen\n(D) Ruler",
-        "answer": "A",
-        "time_reference": [
-            2215,
-            2215
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_549",
         "question": "In the \"Most Talented Animals Auditions\" video by Top Talent in December 2023, how many judges are present?\n(A) Five\n(B) Four\n(C) Six\n(D) Three",
         "answer": "B",
@@ -8410,20 +7892,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/vZV2WCKMsKs.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_658",
-        "question": "In the animated video about tiny creatures in a jungle uploaded by Wezzi in 2023, what is the final destination of the last package packed by a worker?\n(A) Katmandou\n(B) Berlin\n(C) Tokyo\n(D) Budapest",
-        "answer": "A",
-        "time_reference": [
-            869,
-            884
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -8676,20 +8144,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/AeEYQ62t8hA.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_505",
-        "question": "What color top is the second contestant wearing during the best blind auditions of The Voice in 2023?\n(A) Gold\n(B) Red\n(C) Black\n(D) White",
-        "answer": "A",
-        "time_reference": [
-            100,
-            100
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -9115,7 +8569,7 @@
     },
     {
         "index": "lvbench_1094",
-        "question": "What takes place between 04:49 and 06:20 in the video about traditional outdoor cooking with fresh ingredients on K\u0259nd H\u0259yat\u0131's channel?\n(A) They gather the mint and put it into the iron bucket. The dog plays with a beech nut\n(B) The couple gathers the fern and puts it into the iron bucket. The dog plays with a beech nut\n(C) They gather the mint and put it into the iron bucket. The dog watches them\n(D) The couple gathers the fern and puts it into the iron bucket. The dog watches them",
+        "question": "What takes place between 04:49 and 06:20 in the video about traditional outdoor cooking with fresh ingredients on Kənd Həyatı's channel?\n(A) They gather the mint and put it into the iron bucket. The dog plays with a beech nut\n(B) The couple gathers the fern and puts it into the iron bucket. The dog plays with a beech nut\n(C) They gather the mint and put it into the iron bucket. The dog watches them\n(D) The couple gathers the fern and puts it into the iron bucket. The dog watches them",
         "answer": "D",
         "time_reference": [
             289,
@@ -9381,7 +8835,7 @@
     },
     {
         "index": "lvbench_1091",
-        "question": "What is the weather like at the very start of the outdoor cooking session with fresh vegetables and meat on K\u0259nd H\u0259yat\u0131's channel?\n(A) It snows\n(B) It is a good day with bright sunshine\n(C) It rains\n(D) It is a bad day with strong wind",
+        "question": "What is the weather like at the very start of the outdoor cooking session with fresh vegetables and meat on Kənd Həyatı's channel?\n(A) It snows\n(B) It is a good day with bright sunshine\n(C) It rains\n(D) It is a bad day with strong wind",
         "answer": "C",
         "time_reference": [
             12,
@@ -9437,7 +8891,7 @@
     },
     {
         "index": "lvbench_752",
-        "question": "What causes the old man to shake when he appears in the classic nostalgic animation revisited by \u54aa\u5495\u52a8\u6f2b MIGU Animation in 2022?\n(A) He feels excited\n(B) He feels cold\n(C) He feels shocked\n(D) He feels scared",
+        "question": "What causes the old man to shake when he appears in the classic nostalgic animation revisited by 咪咕动漫 MIGU Animation in 2022?\n(A) He feels excited\n(B) He feels cold\n(C) He feels shocked\n(D) He feels scared",
         "answer": "B",
         "time_reference": [
             128,
@@ -9460,20 +8914,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/VTCDQYYKA9o.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_519",
-        "question": "What hairstyle does the singer of \"El Me Minti\u00f3\" sport during her standout blind audition from The Voice's 2023 compilation?\n(A) Short hair\n(B) Long hair\n(C) Other\n(D) Bald",
-        "answer": "D",
-        "time_reference": [
-            4120,
-            4120
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -9521,7 +8961,7 @@
     },
     {
         "index": "lvbench_1150",
-        "question": "What does the vlogger do after finishing her dinner in Nami\u306e\u304f\u3089\u3057's winter morning routine vlog from early 2023?\n(A) She does some activity\n(B) She watches TV\n(C) She goes out\n(D) It comes to the next day",
+        "question": "What does the vlogger do after finishing her dinner in Namiのくらし's winter morning routine vlog from early 2023?\n(A) She does some activity\n(B) She watches TV\n(C) She goes out\n(D) It comes to the next day",
         "answer": "D",
         "time_reference": [
             1950,
@@ -9558,20 +8998,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/evYm0cELO3I.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_147",
-        "question": "What actions does the man in a black suit with black glasses and a beard take in the WELT Documentary about Mercedes tuning from Germany?\n(A) He is checking the vehicle chassis\n(B) He is checking the vehicle interior\n(C) He is checking the vehicle windows\n(D) He is checking the vehicle headlights",
-        "answer": "A",
-        "time_reference": [
-            1980,
-            2010
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -9927,7 +9353,7 @@
     },
     {
         "index": "lvbench_1097",
-        "question": "What is the first thing the man does in the wooden cabin while cooking outdoors in the village style video by K\u0259nd H\u0259yat\u0131?\n(A) Clean the wooden cabin\n(B) Cook the meal\n(C) Make the fire\n(D) Decorate the wooden cabin with the fern",
+        "question": "What is the first thing the man does in the wooden cabin while cooking outdoors in the village style video by Kənd Həyatı?\n(A) Clean the wooden cabin\n(B) Cook the meal\n(C) Make the fire\n(D) Decorate the wooden cabin with the fern",
         "answer": "D",
         "time_reference": [
             569,
@@ -10375,7 +9801,7 @@
     },
     {
         "index": "lvbench_1107",
-        "question": "Where does the shop assistant place the rolled dough in the video about making Korean-style taiyaki ice cream from \ub51c\ub77c\uc774\ud2b8 Delight in 2023?\n(A) She puts the dough in the refrigerator for refrigeration\n(B) She puts the dough into the Taiyaki machine\n(C) She puts the dough in a new bucket for later use\n(D) She puts the dough on the chopping board for later use",
+        "question": "Where does the shop assistant place the rolled dough in the video about making Korean-style taiyaki ice cream from 딜라이트 Delight in 2023?\n(A) She puts the dough in the refrigerator for refrigeration\n(B) She puts the dough into the Taiyaki machine\n(C) She puts the dough in a new bucket for later use\n(D) She puts the dough on the chopping board for later use",
         "answer": "A",
         "time_reference": [
             1160,
@@ -10440,48 +9866,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/XNtNNplAwiI.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_517",
-        "question": "What color is the 24th contestant wearing during their performance on the 2023 season of The Voice showcased by The Voice Global?\n(A) Blue and black\n(B) Blue and white\n(C) Black and white\n(D) Red and white",
-        "answer": "B",
-        "time_reference": [
-            2694,
-            2694
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_141",
-        "question": "What is the yellow semi-circular tool used by engineers dressed in black in the BRABUS Mercedes tuning documentary from WELT?\n(A) Wheel\n(B) Bearing\n(C) Engine\n(D) Brake caliper",
-        "answer": "D",
-        "time_reference": [
-            43,
-            43
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_657",
-        "question": "What is the weather like when the ladybug picks up the apple in the animated feature about tiny creatures in a mysterious jungle uploaded in 2023 by Wezzi?\n(A) Snowy\n(B) Sunny\n(C) Hazy\n(D) Rainy",
-        "answer": "A",
-        "time_reference": [
-            213,
-            217
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -10584,20 +9968,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_661",
-        "question": "Which insect are the ladybugs rescuing from the spider in this 2023 animated adventure on Wezzi's channel?\n(A) Mantis\n(B) Butterfly\n(C) Grasshopper\n(D) Caterpillar",
-        "answer": "D",
-        "time_reference": [
-            2876,
-            3010
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_924",
         "question": "What is the promotional segment discussing the Nvlink Switch System in Jensen Huang's keynote at GTC 2024 presented by Yahoo Finance?\n(A) Chip suitability\n(B) Chip function\n(C) Chip energy saving\n(D) Chip structure",
         "answer": "D",
@@ -10682,48 +10052,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_152",
-        "question": "How does Klaus Pachall's driving style change after his interview in the documentary about Mercedes tuning by BRABUS from Germany on WELT Documentary in 2020?\n(A) He drives in circles\n(B) He drives uphill\n(C) He drives back to the factory\n(D) He drives down the street",
-        "answer": "C",
-        "time_reference": [
-            2850,
-            2880
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_655",
-        "question": "What is the opening scene in the video about tiny critters navigating a distant jungle uploaded by Wezzi in 2023?\n(A) River side\n(B) Forest\n(C) Snow Mountain\n(D) Rice fields",
-        "answer": "C",
-        "time_reference": [
-            115,
-            120
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/qYMnM5blZIE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_514",
-        "question": "Who is the first to turn around during the 17th contestant's performance in The Voice Global's best blind auditions of 2023?\n(A) GIOVANNI\n(B) URBAN\n(C) VANNA\n(D) Justina",
-        "answer": "C",
-        "time_reference": [
-            1930,
-            1950
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/CgvJqGxzRfE.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_857",
         "question": "What action does the presenter take towards Brad Pitt during his award acceptance at the 92nd Oscars ceremony in 2020?\n(A) She hugs him\n(B) She gives a high five\n(C) She slaps him\n(D) She kisses him",
         "answer": "A",
@@ -10781,7 +10109,7 @@
     },
     {
         "index": "lvbench_1096",
-        "question": "What is the first thing the woman does in the wooden cabin during the outdoor Kazan cooking video by K\u0259nd H\u0259yat\u0131 in 2020?\n(A) Decorate the wooden cabin with the fern\n(B) Make the fire\n(C) Clean the wooden cabin\n(D) Cook the meal",
+        "question": "What is the first thing the woman does in the wooden cabin during the outdoor Kazan cooking video by Kənd Həyatı in 2020?\n(A) Decorate the wooden cabin with the fern\n(B) Make the fire\n(C) Clean the wooden cabin\n(D) Cook the meal",
         "answer": "C",
         "time_reference": [
             569,
@@ -10818,20 +10146,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/JTa_Ue2MSwc.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_238",
-        "question": "What is the color of the outfit worn by the hostess of the first set of live hosts connected during Cisco's live broadcast of the opening keynote in Amsterdam 2024?\n(A) Grey suit\n(B) Black suit\n(C) Red suit\n(D) Dark blue suit",
-        "answer": "C",
-        "time_reference": [
-            318,
-            325
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -10906,20 +10220,6 @@
         "gt_retrieval": "clip"
     },
     {
-        "index": "lvbench_148",
-        "question": "What is the role of the man in red in the documentary about BRABUS Mercedes tuning from Germany by WELT Documentary?\n(A) Cleaning the seats\n(B) Restoring the seats\n(C) Adjusting the seat\n(D) Stripping the seats",
-        "answer": "D",
-        "time_reference": [
-            2100,
-            2160
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/Z4HGQL_McDQ.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
         "index": "lvbench_472",
         "question": "How does the action unfold with the first official ball in the opening game of the Williams sisters' 2017 Australian Open final match?\n(A) Serena blocks Venus's big serve, and a wide backhand makes it 0-15\n(B) Serena pushes Venus around the court for the opening point, and a wide backspin makes it 0-15\n(C) Venus pushes Serena around the court for the opening point, and a wide backhand makes it 0-15\n(D) Serena pushes Venus around the court for the opening point, and a wide backhand makes it 0-15",
         "answer": "D",
@@ -10972,20 +10272,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/vHlSoxg8WHo.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_182",
-        "question": "Who was awarded Best Director during the full show of the 96th Academy Awards in 2024?\n(A) Bong Joon-ho\n(B) Christopher Nolan\n(C) Guillermo del Toro\n(D) Damien Chazelle",
-        "answer": "B",
-        "time_reference": [
-            3922,
-            4092
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/t-RtDI2RWQs.mp4"
         ],
         "gt_retrieval": "clip"
     },
@@ -11504,20 +10790,6 @@
         "source": "lvbench",
         "gt_videos": [
             "dataset/LVBench/videos/W-BnDvXXfOs.mp4"
-        ],
-        "gt_retrieval": "clip"
-    },
-    {
-        "index": "lvbench_241",
-        "question": "Who is the second person to speak on stage during the opening keynote of Cisco's major event in Amsterdam for 2024?\n(A) Carrie Palin\n(B) Jonathan Davidson\n(C) Rodney Clark\n(D) Britney Bartlett",
-        "answer": "B",
-        "time_reference": [
-            2532,
-            2555
-        ],
-        "source": "lvbench",
-        "gt_videos": [
-            "dataset/LVBench/videos/QWXlvx1GoTY.mp4"
         ],
         "gt_retrieval": "clip"
     },

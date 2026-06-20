@@ -7,4 +7,4 @@ gzip -d biencoder-nq-dev.json.gz
 
 # Extract text into .txt files
 python extract_text.py
-rm biencoder-nq-dev.json.gz
+rm biencoder-nq-dev.json

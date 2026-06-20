@@ -1,0 +1,64 @@
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12.0"]
+build-backend = "uv_build"
+
+[project]
+name = "universalrag"
+version = "0.2.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate",
+    "av",
+    "backoff",
+    "bert-score",
+    "datasets",
+    "decord2",
+    "deepspeed",
+    "fastparquet",
+    "flash-attn",
+    "gdown",
+    "huggingface-hub",
+    "ipykernel",
+    "matplotlib",
+    "nltk",
+    "num2words",
+    "open-clip-torch",
+    "openai",
+    "opencv-python",
+    "peft",
+    "pycocoevalcap",
+    "qwen-vl-utils",
+    "rouge-score",
+    "scikit-image",
+    "scikit-learn",
+    "scipy",
+    "sentence-transformers",
+    "sentencepiece",
+    "tabulate",
+    "tenacity",
+    "tensorboardx",
+    "timm",
+    "torch",
+    "torchcodec",
+    "torchvision",
+    "transformers<5",
+    "wandb",
+    "wheel",
+    "yt-dlp",
+]
+
+[tool.uv]
+no-build-isolation-package = ['flash-attn']
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128"
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+torchcodec = { index = "pytorch" }
+
+[tool.uv.extra-build-dependencies]
+flash-attn = ["torch", "wheel"]
