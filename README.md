@@ -2,7 +2,7 @@
   
 [![Paper](https://img.shields.io/badge/arXiv-2504.20734-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.20734)
 [![Project-Page](https://img.shields.io/badge/Project-Page-green)](https://universalrag.github.io)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 
 **UniversalRAG** is a novel any-to-any RAG framework that retrieves across multiple modalities and granularities by introducing a *modality-aware routing mechanism* that dynamically identifies the most appropriate modality-specific corpus for each query, effectively addressing the limitations posed by modality gaps and fixed-granularity retrieval.
 
@@ -89,10 +89,12 @@ bash script/4_eval.sh \
 If you find this work useful, please consider citing our paper:
 
 ```bibtex
-@article{yeo2025universalrag,
-  title={UniversalRAG: Retrieval-Augmented Generation over Corpora of Diverse Modalities and Granularities},
-  author={Yeo, Woongyeong and Kim, Kangsan and Jeong, Soyeong and Baek, Jinheon and Hwang, Sung Ju},
-  journal={arXiv preprint arXiv:2504.20734},
-  year={2025}
+@inproceedings{yeo2026universalrag,
+  title     = {UniversalRAG: Retrieval-Augmented Generation over Corpora of Diverse Modalities and Granularities},
+  author    = {Yeo, Woongyeong and Kim, Kangsan and Jeong, Soyeong and Baek, Jinheon and Hwang, Sung Ju},
+  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  month     = {July},
+  year      = {2026},
+  pages     = {3843-3871}
 }
 ```
